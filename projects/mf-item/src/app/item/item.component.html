@@ -1,0 +1,20 @@
+<div id="hero">
+  <form [formGroup]="heroForm" appearance="outline" id="hero__formBox">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Edad" formControlName="age" />
+    </mat-form-field>
+    @if(id){
+    <button mat-raised-button color="primary" (click)="editar()">
+      Guardar
+    </button>
+    } @else {
+    <button mat-raised-button color="primary" (click)="addNew()">
+      Crear héroe
+    </button>
+    }
+  </form>
+</div>

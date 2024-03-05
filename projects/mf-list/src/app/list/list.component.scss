@@ -1,0 +1,38 @@
+#container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+}
+
+#heros{
+  border: 1px solid grey;
+  border-radius: 6px;
+  width: 750px;
+  background-color: #EAECF0;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  &__hero{
+    padding: 20px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &:last-child{
+      border: none;
+    }
+
+    button {
+      max-width: 150px;
+    }
+  }
+
+  &__hero > * {
+    flex: 1;
+    margin: 0 10px;
+  }
+}

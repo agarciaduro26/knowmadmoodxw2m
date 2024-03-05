@@ -1,0 +1,8 @@
+#hero{
+  padding: 24px;
+  &__formBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
