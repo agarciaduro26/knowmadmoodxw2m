@@ -3,3 +3,7 @@ export interface Hero {
   name: string;
   age: number;
 }
+
+export interface HeroWithAgeGroup extends Hero {
+  ageGroup: 'Adolescente' | 'Adulto';
+}

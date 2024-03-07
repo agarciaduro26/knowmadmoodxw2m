@@ -8,9 +8,7 @@
       <input matInput placeholder="Edad" formControlName="age" />
     </mat-form-field>
     @if(id){
-    <button mat-raised-button color="primary" (click)="editar()">
-      Guardar
-    </button>
+    <button mat-raised-button color="primary" (click)="edit()">Guardar</button>
     } @else {
     <button mat-raised-button color="primary" (click)="addNew()">
       Crear héroe

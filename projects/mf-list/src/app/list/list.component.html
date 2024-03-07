@@ -1,14 +1,14 @@
 <div id="container">
+  @if(loading$ | async){
+  <h1>Cargando ....</h1>
+  }@else if((loading$ | async) === false){
   <div id="heros">
-    @for (hero of filteredHeros; track hero.id) {
+    @for (hero of filteredHeros(); track hero) {
     <div id="heros__hero">
       <span>{{ hero.name }}</span>
       <span>{{ hero.age }}</span>
-      <button
-        mat-raised-button
-        color="primary"
-        [routerLink]="['/hero/', hero.id]"
-      >
+      <span>{{ hero.ageGroup }}</span>
+      <button mat-raised-button color="primary" [routerLink]="['/hero/', hero]">
         Editar
       </button>
       <button mat-raised-button color="warn" (click)="deleteHero(hero)">
@@ -31,4 +31,5 @@
   <button mat-raised-button color="accent" [routerLink]="['/hero/']">
     Añadir nuevo
   </button>
+  }
 </div>

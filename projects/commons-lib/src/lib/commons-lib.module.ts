@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,7 +12,7 @@ import { MatCommonModule } from '@angular/material/core';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     MatListModule,
@@ -22,7 +22,10 @@ import { MatCommonModule } from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatCommonModule
+    MatCommonModule,
+    AsyncPipe
+  ],
+  providers: [
   ]
 })
 export class CommonsLibModule { }
